@@ -28,6 +28,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   };
 
   const handleClick = (movie) => {
+    setTrailerUrl("");
     movieTrailer(movie?.name || "")
       .then((url) => {
         const urlParams = new URLSearchParams(new URL(url).search);
